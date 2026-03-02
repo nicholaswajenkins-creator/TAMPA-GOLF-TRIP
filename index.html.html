@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tampa Golf Trip - Brothers From The Same Mother - March 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+  :root {
+    --green-dark: #1a3a2a;
+    --green-mid: #2d5a3f;
+    --green-light: #3d7a56;
+    --green-pale: #e8f5e9;
+    --gold: #c9a94e;
+    --gold-light: #f5e6b8;
+    --cream: #faf8f2;
+    --charcoal: #2c2c2c;
+    --gray-dark: #4a4a4a;
+    --gray-mid: #7a7a7a;
+    --gray-light: #b0b0b0;
+    --white: #ffffff;
+    --border: #e0ddd5;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: A4; margin: 0; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--white);
+    color: var(--charcoal);
+    line-height: 1.65;
+    font-size: 10.5pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cover-page {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(160deg, var(--green-dark) 0%, #0f2418 40%, #1a3a2a 70%, #2d5a3f 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  .cover-page::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(ellipse at 30% 20%, rgba(201,169,78,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(61,122,86,0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .cover-ornament {
+    width: 80px; height: 2px;
+    background: var(--gold);
+    margin: 0 auto;
+    position: relative;
+  }
+  .cover-ornament::before, .cover-ornament::after {
+    content: '';
+    position: absolute; top: -4px;
+    width: 10px; height: 10px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+  }
+  .cover-ornament::before { left: -16px; }
+  .cover-ornament::after { right: -16px; }
+
+  .cover-golf-icon { font-size: 52px; margin-bottom: 30px; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3)); }
+
+  .cover-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 900; font-size: 38pt;
+    color: var(--white);
+    letter-spacing: 3px; text-transform: uppercase;
+    line-height: 1.1; margin-bottom: 8px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    position: relative; z-index: 1;
+  }
+
+  .cover-subtitle {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600; font-size: 15pt;
+    color: var(--gold);
+    letter-spacing: 6px; text-transform: uppercase;
+    margin: 20px 0 30px;
+    position: relative; z-index: 1;
+  }
+
+  .cover-details {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300; font-size: 11pt;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 1.5px; line-height: 2;
+    position: relative; z-index: 1;
+  }
+  .cover-details strong { color: rgba(255,255,255,0.95); font-weight: 500; }
+
+  .cover-bar { width: 60px; height: 3px; background: var(--gold); margin: 25px auto; }
+
+  .content { max-width: 800px; margin: 0 auto; padding: 0 40px; }
+
+  .page-section { padding: 40px 0 20px; page-break-inside: avoid; }
+
+  .day-header {
+    background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+    color: var(--white);
+    padding: 18px 28px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    position: relative; overflow: hidden;
+    page-break-after: avoid;
+  }
+  .day-header::after {
+    content: '';
+    position: absolute; right: 0; top: 0; bottom: 0;
+    width: 5px; background: var(--gold);
+  }
+
+  .day-label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 9pt; font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .day-course-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18pt; font-weight: 700; line-height: 1.2;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px; margin-bottom: 20px;
+    page-break-inside: avoid;
+  }
+
+  .info-card {
+    background: var(--green-pale);
+    border-radius: 6px;
+    padding: 12px 14px;
+    border-left: 3px solid var(--green-light);
+  }
+
+  .info-card-label {
+    font-size: 7.5pt; font-weight: 600;
+    color: var(--gray-mid);
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 3px;
+  }
+
+  .info-card-value { font-size: 10pt; font-weight: 600; color: var(--green-dark); }
+
+  .course-image-wrapper {
+    width: 100%; height: 240px;
+    border-radius: 8px; overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    background: linear-gradient(135deg, #1a3a2a 0%, #2d5a3f 50%, #3d7a56 100%);
+    page-break-inside: avoid;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .course-image-wrapper img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+  }
+
+  .course-image-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: var(--white);
+    padding: 35px 16px 10px;
+    font-size: 8.5pt; font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .course-image-fallback {
+    color: rgba(255,255,255,0.3);
+    font-family: 'Playfair Display', serif;
+    font-size: 42pt; font-weight: 700;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 13pt; font-weight: 700;
+    color: var(--green-dark);
+    margin: 20px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+  }
+
+  .course-text {
+    font-size: 10pt; color: var(--gray-dark);
+    line-height: 1.7; margin-bottom: 14px;
+  }
+
+  .tips-box {
+    background: linear-gradient(135deg, #fefdfb, #f9f6ee);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin: 16px 0 30px;
+    page-break-inside: avoid;
+  }
+
+  .tips-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 11pt; font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .tip-item {
+    font-size: 9.5pt; color: var(--gray-dark);
+    line-height: 1.6; margin-bottom: 7px;
+    padding-left: 18px; position: relative;
+  }
+  .tip-item::before {
+    content: '\25B8'; position: absolute; left: 0;
+    color: var(--green-light); font-weight: 700;
+  }
+
+  .section-divider {
+    width: 100%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 30px 0;
+  }
+
+  .summary-section { page-break-before: always; padding-top: 40px; }
+
+  .summary-header {
+    background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+    color: var(--white);
+    padding: 18px 28px;
+    border-radius: 8px 8px 0 0;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 16pt; font-weight: 700;
+  }
+
+  table {
+    width: 100%; border-collapse: collapse;
+    margin-bottom: 30px; font-size: 9.5pt;
+  }
+
+  thead th {
+    background: var(--green-pale);
+    color: var(--green-dark);
+    font-weight: 600; text-align: left;
+    padding: 10px 14px;
+    font-size: 8.5pt; text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--green-light);
+  }
+
+  tbody td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--gray-dark);
+  }
+  tbody tr:nth-child(even) { background: #fafaf7; }
+  tbody tr:last-child td { border-bottom: 2px solid var(--green-light); }
+
+  .badge-optional {
+    display: inline-block;
+    background: var(--gold-light); color: #8a7020;
+    font-size: 7.5pt; font-weight: 600;
+    padding: 2px 8px; border-radius: 10px;
+    letter-spacing: 0.5px; text-transform: uppercase;
+  }
+
+  .optional-header {
+    background: linear-gradient(135deg, #5a4a1a, #8a7020);
+    color: var(--white);
+    padding: 18px 28px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    position: relative; overflow: hidden;
+  }
+  .optional-header::after {
+    content: '';
+    position: absolute; right: 0; top: 0; bottom: 0;
+    width: 5px; background: var(--gold-light);
+  }
+
+  .option-card {
+    background: #fffef9;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    page-break-inside: avoid;
+  }
+
+  .option-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 12pt; font-weight: 700;
+    color: var(--green-dark); margin-bottom: 2px;
+  }
+
+  .option-tag {
+    display: inline-block;
+    font-size: 7.5pt; font-weight: 600;
+    padding: 2px 8px; border-radius: 10px;
+    letter-spacing: 0.5px; text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .tag-preferred { background: var(--green-pale); color: var(--green-dark); }
+  .tag-alt { background: #f0f0f0; color: var(--gray-mid); }
+
+  .option-desc { font-size: 9.5pt; color: var(--gray-dark); line-height: 1.65; }
+
+  .general-tips {
+    background: var(--green-dark); color: var(--white);
+    border-radius: 8px; padding: 24px 28px;
+    margin: 30px 0; page-break-inside: avoid;
+  }
+  .general-tips .section-title {
+    color: var(--gold);
+    border-bottom-color: rgba(201,169,78,0.4);
+    margin-top: 0;
+  }
+
+  .general-tip-item {
+    font-size: 9.5pt; color: rgba(255,255,255,0.85);
+    line-height: 1.65; margin-bottom: 8px;
+    padding-left: 24px; position: relative;
+  }
+  .general-tip-item::before {
+    content: '\26F3'; position: absolute; left: 0; font-size: 10pt;
+  }
+
+  .page-footer {
+    text-align: center;
+    padding: 40px 0 60px;
+    color: var(--gray-light);
+    font-size: 8.5pt; letter-spacing: 1px;
+  }
+
+  .footer-line {
+    width: 40px; height: 2px;
+    background: var(--gold);
+    margin: 0 auto 15px;
+  }
+
+  @media print {
+    body { font-size: 10pt; }
+    .content { padding: 0 30px; }
+    .cover-page { min-height: 100vh; }
+    .page-section { page-break-inside: avoid; }
+    .day-header { page-break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover-page">
+  <div class="cover-golf-icon">&#9971;</div>
+  <div class="cover-ornament"></div>
+  <div style="height: 25px;"></div>
+  <div class="cover-title">TAMPA<br>GOLF TRIP</div>
+  <div class="cover-subtitle">Brothers From The Same Mother</div>
+  <div class="cover-bar"></div>
+  <div class="cover-details">
+    <strong>MARCH 8 &ndash; 11, 2026</strong><br>
+    Tampa, Florida<br><br>
+    Nick &nbsp;&middot;&nbsp; Jon &nbsp;&middot;&nbsp; Dave &nbsp;&middot;&nbsp; Marie / Mum<br><br>
+    4 Courses &nbsp;&middot;&nbsp; 4 Days &nbsp;&middot;&nbsp; 72 Holes
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+<!-- DAY 1 -->
+<div class="page-section">
+  <div class="day-header">
+    <div class="day-label">Day 1 &mdash; Sunday 8th March</div>
+    <div class="day-course-name">Heritage Harbor Golf &amp; Country Club</div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card"><div class="info-card-label">Tee Time</div><div class="info-card-value">9:00 AM</div></div>
+    <div class="info-card"><div class="info-card-label">Players</div><div class="info-card-value">Nick, Jon, Dave</div></div>
+    <div class="info-card"><div class="info-card-label">Drive Time</div><div class="info-card-value">18 minutes</div></div>
+    <div class="info-card"><div class="info-card-label">Leave By</div><div class="info-card-value">8:15 AM</div></div>
+  </div>
+
+  <div class="course-image-wrapper">
+    <img src="https://golfstayandplays.com/wp-content/uploads/2022/03/heritage-harbor-golf-country-club.jpg" alt="Heritage Harbor Golf Club" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+    <div class="course-image-fallback" style="display:none;">HH</div>
+    <div class="course-image-caption">Heritage Harbor Golf &amp; Country Club &mdash; Lutz, FL</div>
+  </div>
+
+  <div class="section-title">Course Overview</div>
+  <p class="course-text">Heritage Harbor is a par-72 layout stretching nearly 7,000 yards from the back tees, designed by Jed Azinger and Gordon G. Lewis. Located in Lutz, it's one of the more challenging public courses in the Tampa Bay area. The course winds through natural cypress areas and wetlands with four sets of tees. Seven of the 18 holes have no home sites alongside the fairways, giving it an open, uncluttered feel that's rare in Florida residential golf. The premium is firmly on the short game &mdash; large greens offer some relief from strategically placed bunkers and the swirling Florida winds.</p>
+  <p class="course-text"><strong>Address:</strong> 19502 Heritage Harbor Parkway, Lutz, FL 33549 &nbsp;|&nbsp; <strong>Par:</strong> 72 &nbsp;|&nbsp; <strong>Yards:</strong> 6,898 &nbsp;|&nbsp; <strong>Slope:</strong> 129<br><strong>Architect:</strong> Jed Azinger &amp; Gordon G. Lewis &nbsp;|&nbsp; <strong>Type:</strong> Semi-Private &nbsp;|&nbsp; <strong>Greens:</strong> Bermuda</p>
+  <p class="course-text"><strong>Signature Holes:</strong> The par-4 13th (415 yds) demands a forced carry over natural wetlands on your second shot. The par-3 14th is the most dramatic hole on the course &mdash; 263 yards from the tips across a wide natural area and pond, requiring around a 225-yard tee shot just to reach dry land.</p>
+
+  <div class="tips-box">
+    <div class="tips-title">Tips &amp; Recommendations</div>
+    <div class="tip-item">The driving range sits on a lake with floating balls &mdash; treat it as a warm-up only, not a true gauge of ball flight.</div>
+    <div class="tip-item">Greens can roll slower than expected with morning dew. Adjust your putting speed on the first few holes.</div>
+    <div class="tip-item">Water and woods come into play frequently. Bring plenty of balls.</div>
+    <div class="tip-item">Play from the correct tees for your ability. The front tees are forgiving; the tips will properly test you.</div>
+    <div class="tip-item"><strong>19th Hole:</strong> Double Bogeys / Harbor Terrace Restaurant &mdash; full-service sports bar with patio overlooking the course.</div>
+    <div class="tip-item"><strong>Getting There:</strong> Straightforward highway run north via I-275 &amp; I-75. Follow signs into the Heritage Harbor community.</div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- DAY 2 -->
+<div class="page-section">
+  <div class="day-header">
+    <div class="day-label">Day 2 &mdash; Monday 9th March</div>
+    <div class="day-course-name">Plantation Palms Golf Club</div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card"><div class="info-card-label">Tee Time</div><div class="info-card-value">9:00 AM</div></div>
+    <div class="info-card"><div class="info-card-label">Players</div><div class="info-card-value">Nick, Jon, Dave, Marie</div></div>
+    <div class="info-card"><div class="info-card-label">Drive Time</div><div class="info-card-value">16 minutes</div></div>
+    <div class="info-card"><div class="info-card-label">Leave By</div><div class="info-card-value">8:15 AM</div></div>
+  </div>
+
+  <div class="course-image-wrapper">
+    <img src="https://www.plantationpalms.net/wp-content/uploads/2024/06/plantation-palms-golf-aerial.jpg" alt="Plantation Palms Golf Club" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+    <div class="course-image-fallback" style="display:none;">PP</div>
+    <div class="course-image-caption">Plantation Palms Golf Club &mdash; Land O' Lakes, FL</div>
+  </div>
+
+  <div class="section-title">Course Overview</div>
+  <p class="course-text">Voted Tampa Bay's Best Golf Course five years running, Plantation Palms is a premier semi-private course designed by David Harman. Carved from a 400-acre former citrus grove in Land O' Lakes, it features genuine rolling terrain and elevation changes uncommon in Florida golf. The par-72 layout stretches to about 6,800 yards with water in play on 17 of 18 holes. State-of-the-art TifEagle greens are known for fast, true rolls, framed beautifully by pine trees, water features, and large white sand bunkers.</p>
+  <p class="course-text"><strong>Address:</strong> 23253 Plantation Palms Blvd, Land O' Lakes, FL 34639 &nbsp;|&nbsp; <strong>Par:</strong> 72 &nbsp;|&nbsp; <strong>Yards:</strong> 6,735 &nbsp;|&nbsp; <strong>Slope:</strong> 139<br><strong>Architect:</strong> David Harman &nbsp;|&nbsp; <strong>Type:</strong> Semi-Private &nbsp;|&nbsp; <strong>Greens:</strong> TifEagle Bermuda</p>
+  <p class="course-text">The links-style design starts with a welcoming par-5 before stepping up the difficulty with a mixture of strong par-3s. Four sets of tees accommodate all skill levels &mdash; great for the mixed group with Marie / Mum joining.</p>
+
+  <div class="tips-box">
+    <div class="tips-title">Tips &amp; Recommendations</div>
+    <div class="tip-item">Water is on nearly every hole &mdash; stock up on balls. Many players restock at the turn!</div>
+    <div class="tip-item">The greens are fast and receptive with good movement. Read carefully and respect the slopes.</div>
+    <div class="tip-item">Expect a potentially slower round (up to 5 hours). Rangers can be scarce, so pace yourselves.</div>
+    <div class="tip-item">GPS-equipped carts will remind you about restricted areas and pace of play &mdash; don't be alarmed by the beeping.</div>
+    <div class="tip-item">With four sets of tees, this is ideal for mixed abilities. Marie / Mum will enjoy the forward tees.</div>
+    <div class="tip-item"><strong>19th Hole:</strong> Mulligan's Irish Pub &mdash; cold drinks, hearty pub food, and lively weekly trivia and bingo nights.</div>
+    <div class="tip-item"><strong>Bonus:</strong> Lighted 18-hole mini golf on site &mdash; a fun evening activity for the whole group.</div>
+    <div class="tip-item"><strong>Getting There:</strong> Easy highway hop north. The course is 1.5 miles north of SR-54 off Collier Parkway.</div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- DAY 3 -->
+<div class="page-section">
+  <div class="day-header">
+    <div class="day-label">Day 3 &mdash; Tuesday 10th March</div>
+    <div class="day-course-name">Crescent Oaks Country Club</div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card"><div class="info-card-label">Tee Time</div><div class="info-card-value">9:30 AM</div></div>
+    <div class="info-card"><div class="info-card-label">Players</div><div class="info-card-value">Nick, Jon, Dave</div></div>
+    <div class="info-card"><div class="info-card-label">Drive Time</div><div class="info-card-value">34 minutes</div></div>
+    <div class="info-card"><div class="info-card-label">Leave By</div><div class="info-card-value">8:30 AM</div></div>
+  </div>
+
+  <div class="course-image-wrapper">
+    <img src="https://www.golfpass.com/travel-advisor/images/course/15-Crescent-Oaks-Country-Club-hole6aerial.jpg" alt="Crescent Oaks Country Club" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+    <div class="course-image-fallback" style="display:none;">CO</div>
+    <div class="course-image-caption">Crescent Oaks Country Club &mdash; Tarpon Springs, FL</div>
+  </div>
+
+  <div class="section-title">Course Overview</div>
+  <p class="course-text">Located just north of Tampa in Tarpon Springs, Crescent Oaks is an 18-hole championship course designed by renowned architect Steve Smyers. This well-bunkered layout is carved from scenic woodlands, gently rolling hills, and picturesque lakes, measuring up to 6,914 yards at par 72. The course is narrower and more traditional than typical Florida tracks, with cypress-lined fairways that demand accuracy off the tee. Lakes and a meandering creek come into play throughout, with strategically placed greenside bunkers adding to the challenge.</p>
+  <p class="course-text"><strong>Address:</strong> 3300 Crescent Oaks Blvd, Tarpon Springs, FL 34688 &nbsp;|&nbsp; <strong>Par:</strong> 72 &nbsp;|&nbsp; <strong>Yards:</strong> 6,914<br><strong>Architect:</strong> Steve Smyers &nbsp;|&nbsp; <strong>Type:</strong> Semi-Private &nbsp;|&nbsp; <strong>Greens:</strong> Bermuda</p>
+  <p class="course-text"><strong>Signature Holes:</strong> The par-5 10th features an elevated green with a ridge cutting across the middle &mdash; par is a good score. The finishing par-4 18th is a dogleg left with water running the entire left side and the green protected by sand and water on both flanks.</p>
+
+  <div class="tips-box">
+    <div class="tips-title">Tips &amp; Recommendations</div>
+    <div class="tip-item">Course staff are known for being exceptionally friendly and welcoming &mdash; great vibes from check-in.</div>
+    <div class="tip-item">The ranger keeps a firm but fair pace of play. Embrace it &mdash; it keeps things moving nicely.</div>
+    <div class="tip-item">Real grass driving range in good condition with complimentary range balls.</div>
+    <div class="tip-item">No charging ports on the carts &mdash; charge phones and speakers before you arrive.</div>
+    <div class="tip-item">Greens can be slow early with morning dew but dry out quickly and roll true.</div>
+    <div class="tip-item">Club rentals available (newer Srixon sets) but balls are not included with rentals.</div>
+    <div class="tip-item"><strong>19th Hole:</strong> The Oak Tree Bar &amp; Grille &mdash; weekly chef-created Tuesday and Thursday dinner specials. Perfect timing for your round!</div>
+    <div class="tip-item"><strong>Getting There:</strong> Head west/northwest via the Veterans Expressway. Longest drive of the trip at 34 minutes.</div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- DAY 4 -->
+<div class="page-section">
+  <div class="day-header">
+    <div class="day-label">Day 4 &mdash; Wednesday 11th March</div>
+    <div class="day-course-name">Saddlebrook Golf Club</div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card"><div class="info-card-label">Tee Time</div><div class="info-card-value">8:51 AM</div></div>
+    <div class="info-card"><div class="info-card-label">Players</div><div class="info-card-value">Nick, Jon, Dave, Marie</div></div>
+    <div class="info-card"><div class="info-card-label">Drive Time</div><div class="info-card-value">28 minutes</div></div>
+    <div class="info-card"><div class="info-card-label">Leave By</div><div class="info-card-value">8:00 AM</div></div>
+  </div>
+
+  <div class="course-image-wrapper">
+    <img src="https://golfsaddlebrook.com/wp-content/uploads/2022/06/palmer-course-aerial.jpg" alt="Saddlebrook Golf Club" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+    <div class="course-image-fallback" style="display:none;">SB</div>
+    <div class="course-image-caption">Saddlebrook Golf Club &mdash; Wesley Chapel, FL</div>
+  </div>
+
+  <div class="section-title">Course Overview</div>
+  <p class="course-text">The crown jewel of the trip. Saddlebrook Resort sits on 480 acres in Wesley Chapel and has undergone a major $92 million transformation. The original courses, designed by golf legend Arnold Palmer, have been reconfigured by renowned architect Rees Jones into three interchangeable 9-hole courses: Oak, Pine, and Cypress. You'll play a combination of two 9s for your 18-hole round. The Oak Course has already debuted with refreshed greens, reimagined bunkers, and a modern layout that honours the Palmer legacy. Fairways wind through lush cypress, pine, and palm trees with rolling terrain and plenty of water features.</p>
+  <p class="course-text"><strong>Address:</strong> 5700 Saddlebrook Way, Wesley Chapel, FL 33543 &nbsp;|&nbsp; <strong>Par:</strong> Varies by combo &nbsp;|&nbsp; <strong>Yards:</strong> ~6,500<br><strong>Architect:</strong> Arnold Palmer (original) / Rees Jones (redesign) &nbsp;|&nbsp; <strong>Type:</strong> Resort &nbsp;|&nbsp; <strong>Greens:</strong> TifDwarf / TifEagle</p>
+  <p class="course-text">The resort also features a brand-new 13-acre driving range designed by Rees Jones, with dedicated putting and chipping greens and realistic practice bunkers &mdash; range balls included with your tee time.</p>
+
+  <div class="tips-box">
+    <div class="tips-title">Tips &amp; Recommendations</div>
+    <div class="tip-item">Earliest tee time of the trip (8:51 AM) &mdash; leave by 8:00 AM sharp.</div>
+    <div class="tip-item">The resort has been renovating. Expect valet parking and cart shuttles &mdash; arrive 10&ndash;15 minutes early.</div>
+    <div class="tip-item">Range balls are complimentary &mdash; take full advantage of the world-class practice facility.</div>
+    <div class="tip-item">Fix your divots and ball marks. Sand bottles and repair tools provided with every cart.</div>
+    <div class="tip-item">Watch for alligators and turtles around the pond fronting the 18th green &mdash; genuine Florida wildlife!</div>
+    <div class="tip-item"><strong>19th Hole:</strong> Multiple on-site restaurants and bars. The pool bar is fantastic for unwinding after the round.</div>
+    <div class="tip-item"><strong>Getting There:</strong> North via I-75. Follow signs into the Saddlebrook Resort complex.</div>
+    <div class="tip-item"><strong>Make It Special:</strong> This is the premium round. The Arnold Palmer legacy and resort setting give it something extra &mdash; soak it all in.</div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- OPTIONAL 9 HOLES -->
+<div class="page-section">
+  <div class="optional-header">
+    <div class="day-label" style="color: #f5e6b8;">Optional Afternoon Round</div>
+    <div class="day-course-name">9-Hole Options</div>
+  </div>
+
+  <p class="course-text" style="margin-bottom: 18px;">If you fancy squeezing in an extra 9 holes on a free afternoon (Day 1 or Day 3, when you're a 3-ball and likely finishing earlier), here are three solid options &mdash; quick, fun rounds that won't eat into your evening.</p>
+
+  <div class="option-card">
+    <div class="option-name">Innisbrook Resort &mdash; North Course</div>
+    <span class="option-tag tag-preferred">&#9733; Preferred Option</span>
+    <p class="option-desc">Innisbrook's only dedicated 9-hole course, nicknamed "Little Copperhead" after its famous PGA Tour sibling. Located in Palm Harbor (~35 mins from the gaff), this is proper championship-quality 9 holes with tight fairways, abundant cypress and pine trees, and well-bunkered greens that demand accuracy from tee to green. The highlight is the island green on hole 5 &mdash; a nerve-testing par-3 that'll give you a story to tell. Complimentary range balls are included, and the resort facilities are world-class. This is the one to book if you want a premium afternoon experience at one of Florida's most celebrated golf resorts.</p>
+  </div>
+
+  <div class="option-card">
+    <div class="option-name">Rogers Park &mdash; The Short Course</div>
+    <span class="option-tag tag-alt">Alternative</span>
+    <p class="option-desc">A newer addition (opened November 2023), The Short Course at Rogers Park is a fun 9-hole layout supporting First Tee &ndash; Tampa Bay youth programmes. Located in Tampa itself (~15 mins from the gaff), it's the closest option and perfect for a casual, no-pressure afternoon round without a long drive.</p>
+  </div>
+
+  <div class="option-card">
+    <div class="option-name">Tampa Bay Golf &amp; Country Club &mdash; 9-Hole Executive</div>
+    <span class="option-tag tag-alt">Alternative</span>
+    <p class="option-desc">A 9-hole executive course in San Antonio, FL (~30 mins north) with holes ranging from 90 to 186 yards. All about the short game &mdash; perfect for working on wedges and putting after a morning of full-length golf. Water on nearly every hole keeps it interesting despite shorter yardages.</p>
+  </div>
+</div>
+
+<!-- SUMMARY TABLE -->
+<div class="summary-section">
+  <div class="summary-header">Trip at a Glance</div>
+  <table>
+    <thead>
+      <tr><th>Day</th><th>Date</th><th>Course</th><th>Tee Time</th><th>Drive</th><th>Players</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>1</strong></td><td>Sun 8 Mar</td><td><strong>Heritage Harbor</strong></td><td>9:00 AM</td><td>18 min</td><td>Nick, Jon, Dave</td></tr>
+      <tr><td><strong>2</strong></td><td>Mon 9 Mar</td><td><strong>Plantation Palms</strong></td><td>9:00 AM</td><td>16 min</td><td>Nick, Jon, Dave, Marie</td></tr>
+      <tr><td><strong>3</strong></td><td>Tue 10 Mar</td><td><strong>Crescent Oaks</strong></td><td>9:30 AM</td><td>34 min</td><td>Nick, Jon, Dave</td></tr>
+      <tr><td><strong>4</strong></td><td>Wed 11 Mar</td><td><strong>Saddlebrook</strong></td><td>8:51 AM</td><td>28 min</td><td>Nick, Jon, Dave, Marie</td></tr>
+      <tr><td></td><td>Any PM</td><td><strong>Innisbrook North</strong> <span class="badge-optional">Optional 9</span></td><td>TBD</td><td>~35 min</td><td>Flexible</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- GENERAL TIPS -->
+<div class="general-tips">
+  <div class="section-title">General Tips for the Trip</div>
+  <div style="height: 10px;"></div>
+  <div class="general-tip-item"><strong>Sun &amp; Hydration:</strong> March in Tampa averages 78&ndash;82&deg;F with strong sunshine. Pack sunscreen (SPF 50+), hats, and sunglasses. Stay on top of water intake throughout every round.</div>
+  <div class="general-tip-item"><strong>Ball Supply:</strong> Three of the four main courses feature water on the majority of holes. Stock up before the trip &mdash; you'll go through more than you expect.</div>
+  <div class="general-tip-item"><strong>Arrive Early:</strong> Give yourselves 30&ndash;45 minutes before each tee time for check-in, cart assignment, and a warm-up. Saddlebrook (Day 4) may need a bit extra due to resort logistics.</div>
+  <div class="general-tip-item"><strong>Departure Rule:</strong> Leave the gaff at least 45 minutes before your tee time. For Crescent Oaks (34 min drive), leave a full hour before.</div>
+  <div class="general-tip-item"><strong>Post-Round Dining:</strong> Every course has solid on-site food and drink. Highlights are Mulligan's Irish Pub (Day 2) and the Saddlebrook resort restaurants (Day 4).</div>
+  <div class="general-tip-item"><strong>Evening Activities:</strong> Plantation Palms has a lighted mini golf course for a fun group evening. Saddlebrook's pool bar and resort amenities are worth exploring on Day 4.</div>
+</div>
+
+<!-- FOOTER -->
+<div class="page-footer">
+  <div class="footer-line"></div>
+  TAMPA GOLF TRIP 2026 &nbsp;&middot;&nbsp; BROTHERS FROM THE SAME MOTHER<br>
+  Have an incredible trip, lads. &#127948;&#65039;&#127867;
+</div>
+
+</div>
+</body>
+</html>
